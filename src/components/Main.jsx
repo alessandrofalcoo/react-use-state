@@ -4,18 +4,25 @@ import { useState } from 'react'
 
 export default function Main() {
 
-    const [language, setLanguage] = useState(0)
-    const [description, setDescription] = useState(0)
+    const [language, setLanguage] = useState('')
+    const [description, setDescription] = useState('')
 
     return (
         <>
             <div className='buttons'>
                 {Languages.map((element) => (
-                    <Button id={element.id} title={element.title}  >{element}</Button>
+                    <Button
+                        id={element.id}
+                        title={element.title}
+                        onClick={() => {
+                            setDescription(element.description);
+                            setLanguage(element.title);
+                        }}
+                    >{element.title}</Button>
                 ))}
-            </div>
+            </div >
             <div className='paragraph'>
-                <h3>{language}</h3>
+                <h2>{language}</h2>
                 <p>{description}</p>
             </div>
         </>
