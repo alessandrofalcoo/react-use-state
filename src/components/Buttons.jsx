@@ -1,8 +1,8 @@
-export default function Button({ id, title, onClick }) {
+export default function Button({ id, title, onClick, color }) {
     return (
         <button
             type="button"
-            className="btn btn-primary"
+            className={`btn ${color} `}
             key={id}
             onClick={onClick}
         >

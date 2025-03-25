@@ -19,6 +19,7 @@ export default function Main() {
                             setLanguage(element.title);
 
                         }}
+                        color={language === element.title ? 'btn-warning' : 'btn-primary'}
                     >{element.title}</Button>
                 ))}
             </div >
