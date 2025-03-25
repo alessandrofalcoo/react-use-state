@@ -4,10 +4,10 @@ import Languages from '../data/Languages'
 export default function Main() {
 
     return (
-        <>
+        <div className='buttons'>
             {Languages.map((element) => (
-                <Button >{element}</Button>
+                <Button id={element.id} title={element.title} >{element}</Button>
             ))}
-        </>
+        </div>
     )
 }
