@@ -5,7 +5,7 @@ import { useState } from 'react'
 export default function Main() {
 
     const [language, setLanguage] = useState('')
-    const [description, setDescription] = useState('')
+    const [description, setDescription] = useState('Nessun Linguaggio selezionato')
 
     return (
         <>
@@ -17,6 +17,7 @@ export default function Main() {
                         onClick={() => {
                             setDescription(element.description);
                             setLanguage(element.title);
+
                         }}
                     >{element.title}</Button>
                 ))}
